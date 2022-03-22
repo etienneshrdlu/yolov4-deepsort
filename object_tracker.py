@@ -215,8 +215,8 @@ def main(_argv):
             random_insult = insult_list[int(track.track_id)]
             color = [i * 255 for i in color]
             cv2.rectangle(frame, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), color, 2)
-            cv2.rectangle(frame, (int(bbox[0]), int(bbox[1]-30)), (int(bbox[0])+(len(class_name)+len(str(track.track_id)))*17, int(bbox[1])), color, -1)
-            cv2.putText(frame, random_insult,(int(bbox[0]), int(bbox[1]-10)),cv2.FONT_HERSHEY_DUPLEX, 0.75, (255,255,255),2)
+            cv2.rectangle(frame, (int(bbox[0]), int(bbox[1]-50)), (int(bbox[0])+(len(random_insult)*22), int(bbox[1])), color, -1)
+            cv2.putText(frame, random_insult,(int(bbox[0]+10), int(bbox[1]-20)),cv2.FONT_HERSHEY_DUPLEX, 1, (255,255,255),2)
 
         # if enable info flag then print details about each track
             if FLAGS.info:
