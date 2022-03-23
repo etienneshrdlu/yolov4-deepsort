@@ -14,6 +14,7 @@ from tensorflow.python.saved_model import tag_constants
 from core.config import cfg
 from PIL import Image
 import cv2
+import random
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.compat.v1 import ConfigProto
@@ -202,7 +203,8 @@ def main(_argv):
         
         #insult randomiser
         insult_list = ['gobshite','shitehawk','west brit','gom','gowlbag','ganch','gomey adlum','melt','schnake','messer','shaper','head-the-ball','dry shite','gowl','yer man','langer','geebag','lickarse','dirtbird','gowl','chancer','dose','spoofer','headbanger','hoor','gowl','wagon','thick','bollix','dope','eejit','sap','pox','flute','fridget','bowsie','culchie','gowl','jackeen','mickey dazzler','dosser','gouger','gobshite','shitehawk','west brit','gom','gowlbag','ganch','gomey adlum','melt','schnake','messer','shaper','head-the-ball','dry shite','gowl','yer man','langer','geebag','lickarse','dirtbird','gowl','chancer','dose','spoofer','headbanger','hoor','gowl','wagon','thick','bollix','dope','eejit','sap','pox','flute','fridget','bowsie','culchie','gowl','jackeen','mickey dazzler','dosser','gouger','gobshite','shitehawk','west brit','gom','gowlbag','ganch','gomey adlum','melt','schnake','messer','shaper','head-the-ball','dry shite','gowl','yer man','langer','geebag','lickarse','dirtbird','gowl','chancer','dose','spoofer','headbanger','hoor','gowl','wagon','thick','bollix','dope','eejit','sap','pox','flute','fridget','bowsie','culchie','gowl','jackeen','mickey dazzler','dosser','gouger','gobshite','shitehawk','west brit','gom','gowlbag','ganch','gomey adlum','melt','schnake','messer','shaper','head-the-ball','dry shite','gowl','yer man','langer','geebag','lickarse','dirtbird','gowl','chancer','dose','spoofer','headbanger','hoor','gowl','wagon','thick','bollix','dope','eejit','sap','pox','flute','fridget','bowsie','culchie','gowl','jackeen','mickey dazzler','dosser','gouger','gobshite','shitehawk','west brit','gom','gowlbag','ganch','gomey adlum','melt','schnake','messer','shaper','head-the-ball','dry shite','gowl','yer man','langer','geebag','lickarse','dirtbird','gowl','chancer','dose','spoofer','headbanger','hoor','gowl','wagon','thick','bollix','dope','eejit','sap','pox','flute','fridget','bowsie','culchie','gowl','jackeen','mickey dazzler','dosser','gouger','gobshite','shitehawk','west brit','gom','gowlbag','ganch','gomey adlum','melt','schnake','messer','shaper','head-the-ball','dry shite','gowl','yer man','langer','geebag','lickarse','dirtbird','gowl','chancer','dose','spoofer','headbanger','hoor','gowl','wagon','thick','bollix','dope','eejit','sap','pox','flute','fridget','bowsie','culchie','gowl','jackeen','mickey dazzler','dosser','gouger']
-
+        random.shuffle(insult_list)
+        
         # update tracks
         for track in tracker.tracks:
             if not track.is_confirmed() or track.time_since_update > 1:
