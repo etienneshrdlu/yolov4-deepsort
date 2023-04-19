@@ -161,7 +161,7 @@ def main(_argv):
         allowed_classes = list(class_names.values())
         
         # custom allowed classes (uncomment line below to customize tracker for only people)
-        allowed_classes = ['person']
+        allowed_classes = ['horse']
 
         # loop through objects and use class index to get class name, allow only classes in allowed_classes list
         names = []
